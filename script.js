@@ -209,4 +209,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   }
-});
+  // ============================================
+  // SCROLL FADE-UP ANIMATION (IntersectionObserver)
+  // ============================================
+  const fadeEls = document.querySelectorAll('.fade-up, .fade-up-stagger');
+  if (fadeEls.length && 'IntersectionObserver' in window) {
+    const fadeObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(el => fadeObs.observe(el));
+  } else {
+    // Fallback: show everything immediately
+    fadeEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // ============================================
+  // STAT COUNTER ANIMATION
+  // ============================================
+  const counters = document.querySelectorAll('[data-count-to]');
+  if (counters.length && 'IntersectionObserver' in window) {
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = el.getAttribute('data-count-to');
+          const suffix = el.getAttribute('data-count-suffix') || '';
+          const prefix = el.getAttribute('data-count-prefix') || '';
+          const isFloat = target.includes('.');
+          const end = parseFloat(target);
+          const duration = 2000;
+          const start = performance.now();
+
+          function tick(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = eased * end;
+            el.textContent = prefix + (isFloat ? current.toFixed(1) : Math.floor(current)) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          counterObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(el => counterObs.observe(el));
+  }});

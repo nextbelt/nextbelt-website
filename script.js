@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const params = {
-        to_email: "nextbelt@next-belt.com",
+        to_email: "info@next-belt.com",
         title: subject,
         name,
         time: now,

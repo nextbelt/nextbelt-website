@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TDB2L8Z5');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7BFPQ0K71"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7BFPQ0K71');
+  </script>
+
+  <script id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="eb2c25ca-5038-4fb7-bd77-7d8ce00cdc62"
+          data-blockingmode="auto"
+          type="text/javascript"></script>
+  <style>#CookiebotWidget, .CookiebotWidget { display: none !important; }</style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Belt Catalog — NextBelt</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+
+  <link rel="stylesheet" href="styles-new.css?v=20251221">
+  <link rel="preconnect" href="https://esm.sh">
+  
+  <style>
+    /* Quote modal overrides for new theme */
+    #quote-modal .modal-content input,
+    #quote-modal .modal-content select,
+    #quote-modal .modal-content textarea {
+      color: var(--color-text) !important;
+      background: var(--color-bg) !important;
+      border: 1px solid var(--color-border) !important;
+      border-radius: var(--radius-sm) !important;
+      padding: var(--space-sm) var(--space-md) !important;
+      font-size: var(--text-sm) !important;
+      font-family: inherit !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    
+    #quote-modal .modal-content input:focus,
+    #quote-modal .modal-content select:focus,
+    #quote-modal .modal-content textarea:focus {
+      border-color: var(--color-primary) !important;
+      box-shadow: 0 0 0 3px rgba(13, 79, 79, 0.1) !important;
+      outline: none !important;
+    }
+    
+    #quote-modal .modal-content input[type="date"] {
+      cursor: pointer !important;
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+    }
+    
+    #quote-modal .modal-content input[type="date"]::-webkit-calendar-picker-indicator {
+      cursor: pointer !important;
+      opacity: 0.6;
+    }
+    
+    #quote-modal .modal-content input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDB2L8Z5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <a class="logo" href="index.html" aria-label="NextBelt Home">
+      <img src="logo.png" alt="NextBelt Logo" />
+      <span class="logo-text">NextBelt</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+      <span id="menu-icon">☰</span>
+    </button>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">Solutions</a>
+          <ul class="dropdown-menu">
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="platform.html">Platform (SMMS)</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </li>
+        <li><a class="active" href="belt-catalog.html">Catalog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="catalog">
+    <div class="container">
+      <h1 class="catalog-title">Belt Catalog</h1>
+      <p class="catalog-subtitle">Choose your belt. Select your specs.</p>
+
+      <!-- SMMS Ready Badge -->
+      <div style="background: rgba(13, 79, 79, 0.08); border: 1px solid rgba(13, 79, 79, 0.2); padding: 12px 16px; border-radius: 8px; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; background: var(--color-primary); color: white; padding: 4px 8px; border-radius: 4px;">SMMS</span>
+        <div>
+          <strong style="color: var(--color-primary);">SMMS Ready:</strong> 
+          <span style="color: var(--color-text-secondary); font-size: 14px;">Every belt ordered is automatically added to your Asset Registry for lifecycle tracking.</span>
+        </div>
+      </div>
+
+      <div class="catalog-controls">
+        <input id="search" type="search" placeholder="Search by type, application, color, thickness..." aria-label="Search catalog" />
+        <div class="filters">
+          <select id="category" aria-label="Filter by category">
+            <option value="">All Categories</option>
+            <option>PVC</option>
+            <option>PVK</option>
+            <option>PU</option>
+            <option>Rollers</option>
+            <option>Accessories</option>
+          </select>
+          <select id="thickness" aria-label="Filter by thickness">
+            <option value="">Any Thickness</option>
+            <option value="≤2">≤ 2 mm</option>
+            <option value="2–4">2–4 mm</option>
+            <option value="4–6">4–6 mm</option>
+            <option value="6+">≥ 6 mm</option>
+          </select>
+          <select id="color" aria-label="Filter by color">
+            <option value="">Any Color</option>
+            <option>White</option>
+            <option>Green</option>
+            <option>Dark Green</option>
+            <option>Black</option>
+            <option>Blue</option>
+            <option>Gray</option>
+            <option>Red</option>
+          </select>
+          <button id="reset-filters" type="button" class="btn btn-secondary btn-reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="catalog-scroll-hint">← Swipe or scroll to explore all belts →</div>
+      
+      <!-- Scroll Navigation Buttons -->
+      <button class="catalog-scroll-nav left" id="scroll-left" aria-label="Scroll left" type="button">‹</button>
+      <button class="catalog-scroll-nav right" id="scroll-right" aria-label="Scroll right" type="button">›</button>
+      
+      <div id="catalog-grid" class="catalog-grid" aria-live="polite"></div>
+      <p class="catalog-note">Need a custom size, cleats/sidewalls, guide bars, or roller dimensions? Add details in the notes.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bar">
+      <span><strong>AZ ROC License:</strong> #359711</span>
+      <span><strong>Avetta ID:</strong> 250472585</span>
+      <span><strong>Email:</strong> <a href="mailto:nextbelt@next-belt.com">nextbelt@next-belt.com</a></span>
+      <span><strong>Phone:</strong> <a href="tel:+19152355225">915-235-5225</a></span>
+      <span><a href="#" onclick="window.Cookiebot && Cookiebot.renew(); return false;">Privacy Settings / Do Not Sell or Share</a></span>
+    </div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span class="footer-legal-sep">·</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+    <p>© 2025–2026 NextBelt LLC. All rights reserved.</p>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- Quote Modal -->
+  <div id="quote-modal" class="modal" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+      <button class="modal-close" id="quote-close" aria-label="Close" type="button">×</button>
+      <h2 id="quote-title">Request Quote</h2>
+
+      <div class="quote-img" id="quote-img" style="display:none;">
+        <img id="quote-img-el" alt="" loading="lazy" decoding="async">
+      </div>
+
+      <div class="quote-item" id="quote-item"></div>
+
+      <form id="quote-form" autocomplete="on">
+        <label for="q_hp" class="sr-only">Leave this field empty</label>
+        <input type="text" id="q_hp" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <div class="grid-2">
+          <div>
+            <label for="q_name">Your Name*</label>
+            <input id="q_name" name="q_name" type="text" required />
+          </div>
+          <div>
+            <label for="q_email">Your Email*</label>
+            <input id="q_email" name="q_email" type="email" required />
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <label for="q_company">Company</label>
+            <input id="q_company" name="q_company" type="text" />
+          </div>
+          <div>
+            <label for="q_phone">Phone</label>
+            <input id="q_phone" name="q_phone" type="tel" />
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <label for="q_quantity">Quantity (rolls/pcs)</label>
+            <input id="q_quantity" name="q_quantity" type="number" min="1" />
+          </div>
+          <div>
+            <label for="q_need_by">Need By (date)</label>
+            <input id="q_need_by" name="q_need_by" type="date" placeholder="mm/dd/yyyy" />
+          </div>
+        </div>
+
+        <!-- NEW: Priority -->
+        <div>
+          <label for="q_priority">Priority*</label>
+          <select id="q_priority" name="q_priority" required>
+            <option value="Normal">Normal</option>
+            <option value="High">High</option>
+            <option value="Emergency">Emergency</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="q_notes">Notes (sizes, width, length, cleats/sidewalls, roller Ø & length, etc.)</label>
+          <textarea id="q_notes" name="q_notes" rows="3" placeholder="Example: belt 3.0mm, 800mm width, 20m; or roller Ø50 x 600mm, 10 pcs."></textarea>
+        </div>
+
+        <input type="hidden" id="q_item_json" name="q_item_json" />
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="quote-cancel">Cancel</button>
+          <button type="submit" class="btn">Send Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- EmailJS loader -->
+  <script type="module">
+    import emailjs from 'https://esm.sh/@emailjs/browser';
+    window.emailjs = emailjs; /* script.js will init with your public key */
+  </script>
+
+  <!-- Catalog data + logic -->
+  <script>
+    /* ========= CONFIG ========= */
+    const SERVICE_ID = "service_9pdxtom";
+    const ADMIN_TEMPLATE_ID = "template_mulotoe";
+    const IMAGE_BASE = "/img/catalog";
+    const IMG_VER = "2025-08-30-4";
+
+    /* ========= DATA ========= */
+    const catalogData = [
+      { id: 1, category: "PVC",  type: "General Purpose PVC Belt",       thickness: "1.0 / 1.5 / 2.0 / 3.0 / 4.0 / 5.0 / 6.0", colors: ["Green","White","Black"], temp:"-10 to +80 °C", tensile:"≥50–200 N/mm", applications:"Food handling, textile lines, packaging, machinery" },
+      { id: 2, category: "PVC",  type: "Anti-Slip Grass Pattern Belt",    thickness: "4.0 / 4.5 / 5.0 / 6.0 / 8.0",              colors: ["Green","Dark Green","Black"], temp:"-10 to +80 °C", tensile:"≥100–150 N/mm", applications:"Airports, logistics hubs, supermarkets" },
+      { id: 3, category: "PVC",  type: "Heavy Duty Sanding Belt",         thickness: "9.0 / 11.0",                               colors: ["Black","Gray"], temp:"-15 to +80 °C", tensile:"≥150–230 N/mm", applications:"Woodworking, sanding machinery" },
+      { id: 4, category: "PVC",  type: "Chevron & V-Pattern Belt",        thickness: "5.0 / 7.0 / 9.0 / 10.0",                   colors: ["Green","White","Transparent"], temp:"-10 to +80 °C", tensile:"≥100 N/mm", applications:"Inclined conveying, agriculture, tobacco" },
+      { id: 5, category: "PVC",  type: "Zigzag Pattern Belt",             thickness: "8.0 / 12.0",                               colors: ["Blue-Black"], temp:"-10 to +80 °C", tensile:"≥400–800 N/mm", applications:"Incline hoists, heavy-duty transport" },
+      { id: 6, category: "PVC",  type: "PVC Dot Surface Belt",            thickness: "5.0",                                      colors: ["Green","White"], temp:"-10 to +80 °C", tensile:"≥100 N/mm", applications:"Logistics, parcel handling, incline transport" },
+      { id: 7, category: "PVK",  type: "High Strength PVK Belt",          thickness: "3.0 / 3.6 / 4.2 / 4.3",                    colors: ["Black"], temp:"-10 to +80 °C", tensile:"≥200–260 N/mm", applications:"Telescopic conveyors, parcel sorting (airport & e-commerce)" },
+      { id: 8, category: "PVC",  type: "Food Grade Cloth-Reinforced Belt",thickness: "1.5 / 1.8 / 3.0 / 4.0",                    colors: ["White"], temp:"-10 to +80 °C", tensile:"≥80–100 N/mm", applications:"Food industry (bulk, tinned, boxed)" },
+      { id: 9, category: "PVC",  type: "Straight Line Traction Belt",     thickness: "3.0 / 5.0",                                colors: ["Green","Black","Dark Green"], temp:"-10 to +80 °C", tensile:"≥120–170 N/mm", applications:"Airport logistics, timber industry, express" },
+      { id:10, category: "PVC",  type: "Diamond Surface Grip Belt",       thickness: "2.0 / 3.0 / 4.0 / 5.0",                    colors: ["Green","White","Black"], temp:"-10 to +80 °C", tensile:"≥100–180 N/mm", applications:"Airport transfer, food, industrial use" },
+      { id:11, category: "PU",   type: "PU Food Grade Belt",              thickness: "0.8 / 1.5 / 2.0 / 3.0 / 4.0",              colors: ["White","Dark Green","Blue"], temp:"-10 to +80 °C", tensile:"≥100–150 N/mm", applications:"Bakery, meat, grain, produce processing" },
+      { id:12, category: "PU",   type: "PU Cut-Resistant Belt",           thickness: "5.0",                                      colors: ["White"], temp:"-10 to +80 °C", tensile:"≥400 N/mm", applications:"Press stamping, food cutting, bakery & meat lines" },
+      { id:13, category: "PVC",  type: "Stone & Ceramic Handling Belt",   thickness: "6.0 / 7.0 / 9.0",                          colors: ["Dark Green"], temp:"-10 to +80 °C", tensile:"≥680–800 N/mm", applications:"Ceramic polishing, stone industry" },
+      { id:14, category: "PVC",  type: "Industrial Green PVC Belt",       thickness: "2.0 / 3.0 / 4.0",                          colors: ["Dark Green"], temp:"-10 to +80 °C", tensile:"≥100–150 N/mm", applications:"Machinery, electronics" },
+      { id:15, category: "PVC",  type: "Red Surface Rubber Belt",         thickness: "6.0",                                      colors: ["Red"], temp:"-10 to +80 °C", tensile:"N/A", applications:"Brick making, heavy-duty" },
+      { id:16, category: "PU",   type: "PU Cloth Texture Belt",           thickness: "1.5",                                      colors: ["Green-Black"], temp:"-10 to +80 °C", tensile:"≥120 N/mm", applications:"Food & machinery" },
+      { id:17, category: "Accessories", type: "PU Cleats / Sidewalls / Guides", thickness: "N/A", colors: ["N/A"], temp:"N/A", tensile:"N/A", applications:"Customization for incline & tracking" },
+      { id:18, category:"Rollers", type:"Gravity Conveyor Roller",
+        thickness:"N/A", colors:["N/A"], temp:"N/A", tensile:"N/A",
+        applications:"Galvanized finish; Shell: Q235 steel; Roller: A3 carbon steel; MOQ: 50. Specify diameter and length in notes."
+      }
+    ];
+
+    /* ========= UTILS ========= */
+    const toTokens = (s) => (s || "").toLowerCase();
+    const slugify = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g,"");
+    function imageFor(item){
+      const baseName = item.img ? item.img.replace(/\.(jpg|jpeg|png|webp)$/i,'') : slugify(item.type);
+      const base = `${IMAGE_BASE}/${baseName}`;
+      const v = `?v=${encodeURIComponent(IMG_VER)}`;
+      return { webp: `${base}.webp${v}`, jpg: `${base}.jpg${v}` };
+    }
+    function thicknessBucket(thx) {
+      const nums = (thx && thx.match(/(\d+(\.\d+)?)/g) || []).map(parseFloat);
+      if (!nums.length) return "";
+      const max = Math.max(...nums);
+      if (max <= 2) return "≤2";
+      if (max <= 4) return "2–4";
+      if (max <= 6) return "4–6";
+      return "6+";
+    }
+
+    /* ========= DOM ========= */
+    const elGrid = document.getElementById('catalog-grid');
+    const elSearch = document.getElementById('search');
+    const elCategory = document.getElementById('category');
+    const elThickness = document.getElementById('thickness');
+    const elColor = document.getElementById('color');
+
+    const modal = document.getElementById('quote-modal');
+    const modalClose = document.getElementById('quote-close');
+    const modalCancel = document.getElementById('quote-cancel');
+    const modalItem = document.getElementById('quote-item');
+    const modalForm = document.getElementById('quote-form');
+    const modalItemJson = document.getElementById('q_item_json');
+    const modalImgWrap = document.getElementById('quote-img');
+    const modalImg = document.getElementById('quote-img-el');
+
+    /* ========= RENDER ========= */
+    function render(items) {
+      elGrid.innerHTML = items.map(item => {
+        const img = imageFor(item);
+        const onErr = `this.style.display='none';`;
+        return `
+        <article class="card">
+          <div class="card-img">
+            <img src="${img.webp}" alt="${item.type}" onerror="${onErr}">
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>${item.type}</h3>
+              <span class="tag">${item.category}</span>
+            </div>
+            <ul class="specs">
+              <li><strong>Thickness:</strong> ${item.thickness}${(/[0-9]/.test(item.thickness||"")) ? " mm" : ""}</li>
+              <li><strong>Colors:</strong> ${Array.isArray(item.colors) ? item.colors.join(", ") : item.colors}</li>
+              <li><strong>Temp:</strong> ${item.temp}</li>
+              <li><strong>Tensile:</strong> ${item.tensile}</li>
+            </ul>
+            <button class="btn btn-sm" type="button" data-quote='${JSON.stringify(item)}'>Request Quote</button>
+          </div>
+        </article>`;
+      }).join('') || `<p>No results. Try clearing filters.</p>`;
+
+      document.querySelectorAll('button[data-quote]').forEach(btn => {
+        btn.addEventListener('click', () => openQuote(JSON.parse(btn.dataset.quote)));
+      });
+    }
+
+    function applyFilters() {
+      const q = toTokens(elSearch.value);
+      const c = elCategory.value;
+      const t = elThickness.value;
+      const col = elColor.value;
+
+      render(catalogData.filter(row => {
+        const hay = toTokens([row.type, row.category, row.thickness, row.colors, row.applications].join(" "));
+        return (q ? hay.includes(q) : true)
+          && (c ? row.category === c : true)
+          && (t ? thicknessBucket(row.thickness) === t : true)
+          && (col ? hay.includes(col.toLowerCase()) : true);
+      }));
+    }
+
+    /* ========= MODAL ========= */
+    function openQuote(item) {
+      const img = imageFor(item);
+      modalImgWrap.style.display = 'block';
+      modalImg.alt = item.type;
+      modalImg.src = img.webp;
+      modalImg.onerror = () => { modalImg.onerror = () => { modalImgWrap.style.display = 'none'; }; modalImg.src = img.jpg; };
+      modalImg.loading = "lazy"; modalImg.decoding = "async";
+
+      modalItem.innerHTML = `
+        <div class="summary">
+          <strong>${item.type}</strong> <span class="tag">${item.category}</span><br/>
+          <small><strong>Thickness:</strong> ${item.thickness}${(/[0-9]/.test(item.thickness||"")) ? " mm" : ""} &nbsp;|&nbsp; <strong>Colors:</strong> ${Array.isArray(item.colors)?item.colors.join(", "):item.colors}</small><br/>
+          <small><strong>Temp:</strong> ${item.temp} &nbsp;|&nbsp; <strong>Tensile:</strong> ${item.tensile}</small><br/>
+          <small><strong>Applications:</strong> ${item.applications}</small>
+        </div>`;
+      modalItemJson.value = JSON.stringify(item);
+      modal.style.display = 'flex';
+      document.body.classList.add('modal-open');
+      
+      // Fix date input to ensure it's clickable
+      setTimeout(() => {
+        document.getElementById('q_name')?.focus();
+        const dateInput = document.getElementById('q_need_by');
+        if (dateInput) {
+          // Force re-initialization of date input
+          dateInput.style.pointerEvents = 'auto';
+          dateInput.removeAttribute('readonly');
+          // Ensure the input can receive clicks
+          dateInput.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.showPicker?.();
+          });
+        }
+      }, 10);
+    }
+
+    function closeQuote() {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+      modalForm.reset();
+      modalImgWrap.style.display = 'none';
+    }
+
+    modalClose.addEventListener('click', closeQuote);
+    modalCancel.addEventListener('click', closeQuote);
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeQuote(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && modal.style.display === 'flex') closeQuote(); });
+
+    /* ========= SEND ========= */
+    modalForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if ((document.getElementById('q_hp')||{}).value) { closeQuote(); return; }
+
+      const item      = JSON.parse(modalItemJson.value || "{}");
+      const name      = document.getElementById('q_name').value;
+      const email     = document.getElementById('q_email').value;
+      const company   = document.getElementById('q_company').value;
+      const phone     = document.getElementById('q_phone').value;
+      const quantity  = document.getElementById('q_quantity').value;
+      const need_by   = document.getElementById('q_need_by').value;
+      const priority  = document.getElementById('q_priority').value;
+      const notes     = document.getElementById('q_notes').value;
+      const now       = new Date().toLocaleString();
+
+      const summary =
+`Quote Request from ${name} <${email}>
+Company: ${company || 'N/A'}    Phone: ${phone || 'N/A'}
+Priority: ${priority}
+Quantity: ${quantity || 'N/A'}   Need By: ${need_by || 'N/A'}
+
+Requested Item
+• Type: ${item.type}
+• Category: ${item.category}
+• Thickness: ${item.thickness}${(/[0-9]/.test(item.thickness||"")) ? " mm" : ""}
+• Colors: ${Array.isArray(item.colors)?item.colors.join(", "):item.colors}
+• Temp: ${item.temp}
+• Tensile: ${item.tensile}
+• Applications: ${item.applications}
+
+Notes:
+${notes || 'N/A'}
+
+Submitted: ${now}`;
+
+      const adminParams = {
+        to_email: "nextbelt@next-belt.com",
+        title: `Quote Request - ${item.type} [${priority}]`,
+        name, time: now, message: summary, email, reply_to: email
+      };
+
+      if (!window.emailjs) {
+        window.showToast && window.showToast("Email service not loaded. Please try again.", true);
+        return;
+      }
+
+      emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, adminParams)
+        .then(() => {
+          if (priority === 'Emergency') {
+            const zendutyParams = {
+              to_email: "nextbelt-emergency@next-belt.zendutyalerts.com",
+              title: `Emergency RFQ - ${item.type}`,
+              name, time: now, message: summary, email, reply_to: email
+            };
+            return emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, zendutyParams);
+          }
+        })
+        .then(() => { closeQuote(); window.showToast && window.showToast("Quote sent! We’ve emailed you a confirmation."); })
+        .catch(err => { console.error("EmailJS error:", err); closeQuote(); window.showToast && window.showToast("Request sent to NextBelt. If the confirmation didn’t arrive, we’ll follow up manually.", true); });
+    });
+
+    /* ========= INIT ========= */
+    elSearch.addEventListener('input', applyFilters);
+    elCategory.addEventListener('change', applyFilters);
+    elThickness.addEventListener('change', applyFilters);
+    elColor.addEventListener('change', applyFilters);
+    document.getElementById('reset-filters').addEventListener('click', () => {
+      elSearch.value = ""; elCategory.value = ""; elThickness.value = ""; elColor.value = "";
+      applyFilters(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    render(catalogData);
+
+    /* ========= SCROLL NAVIGATION ========= */
+    const scrollLeftBtn = document.getElementById('scroll-left');
+    const scrollRightBtn = document.getElementById('scroll-right');
+    const catalogGrid = document.getElementById('catalog-grid');
+
+    function updateScrollButtons() {
+      const { scrollLeft, scrollWidth, clientWidth } = catalogGrid;
+      scrollLeftBtn.disabled = scrollLeft <= 0;
+      scrollRightBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
+    }
+
+    function scrollCatalog(direction) {
+      const scrollAmount = 320; // Slightly more than card width to show next card
+      const currentScroll = catalogGrid.scrollLeft;
+      const targetScroll = direction === 'left' 
+        ? currentScroll - scrollAmount 
+        : currentScroll + scrollAmount;
+      
+      catalogGrid.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    }
+
+    scrollLeftBtn.addEventListener('click', () => scrollCatalog('left'));
+    scrollRightBtn.addEventListener('click', () => scrollCatalog('right'));
+    
+    // Update button states on scroll
+    catalogGrid.addEventListener('scroll', updateScrollButtons);
+    
+    // Update buttons after initial render
+    setTimeout(updateScrollButtons, 100);
+
+    // Update buttons when window resizes
+    window.addEventListener('resize', () => {
+      setTimeout(updateScrollButtons, 100);
+    });
+
+    // Update buttons when filter changes
+    const originalApplyFilters = applyFilters;
+    applyFilters = function() {
+      originalApplyFilters();
+      setTimeout(updateScrollButtons, 100);
+    };
+  </script>
+
+  <script src="script.js"></script>
+
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    Tawk_API.onLoad = function(){
+      Tawk_API.minimize();
+    };
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68b4a12e0e49f131d3b4b3fa/1j40pb80g';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <style>
+    iframe[title="chat widget"] {
+      max-height: 450px !important;
+      max-width: 350px !important;
+    }
+  </style>
+  <!-- End of Tawk.to Script -->
+</body>
+</html>

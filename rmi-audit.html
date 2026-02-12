@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TDB2L8Z5');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7BFPQ0K71"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7BFPQ0K71');
+  </script>
+
+  <script id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="eb2c25ca-5038-4fb7-bd77-7d8ce00cdc62"
+          data-blockingmode="auto"
+          type="text/javascript"></script>
+  <style>#CookiebotWidget, .CookiebotWidget { display: none !important; }</style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RMI Audit Toolkit — NextBelt</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+
+  <meta name="description" content="Reliability Maturity Index (RMI) Assessment Tool. Evaluate and benchmark your maintenance organization's maturity across Planning, Processes, and Technology." />
+  
+  <link rel="stylesheet" href="styles-new.css?v=20251221" />
+  <style>
+    .rmi-hero {
+      background: linear-gradient(135deg, #0D4F4F 0%, #1a6b6b 100%);
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .rmi-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .rmi-hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      opacity: 0.9;
+    }
+
+    .rmi-pillars {
+      padding: 80px 20px;
+      background: #F8F7F4;
+    }
+
+    .rmi-pillars .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .rmi-pillars h2 {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 2.5rem;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .pillar-card {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      border: 2px solid #D1D0CC;
+      transition: all 0.3s ease;
+    }
+
+    .pillar-card:hover {
+      border-color: #C65D3B;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .pillar-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .pillar-card h3 {
+      color: #0D4F4F;
+      margin-bottom: 16px;
+      font-size: 1.75rem;
+    }
+
+    .pillar-card p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .pillar-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pillar-card li {
+      padding: 8px 0;
+      border-bottom: 1px solid #F0F0F0;
+      color: #666;
+    }
+
+    .pillar-card li:before {
+      content: "✓ ";
+      color: #C65D3B;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .rmi-benefits {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+    }
+
+    .benefit-item {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .benefit-item .icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .benefit-item h4 {
+      color: #0D4F4F;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+
+    .benefit-item p {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .rmi-login-section {
+      padding: 80px 20px;
+      background: #F8F7F4;
+      text-align: center;
+    }
+
+    .login-card {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 60px 40px;
+      border-radius: 8px;
+      border: 2px solid #D1D0CC;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .login-card h2 {
+      margin-bottom: 16px;
+      color: #0D4F4F;
+    }
+
+    .login-card p {
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .login-redirect-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      background: #0D4F4F;
+      color: white;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 2px solid #0D4F4F;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .login-redirect-btn:hover {
+      background: #0a3d3d;
+      border-color: #0a3d3d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(13, 79, 79, 0.3);
+    }
+
+    .login-redirect-btn .arrow {
+      margin-left: 8px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .login-redirect-btn:hover .arrow {
+      margin-left: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .rmi-hero h1 {
+        font-size: 2rem;
+      }
+
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .login-card {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDB2L8Z5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <a class="logo" href="index.html" aria-label="NextBelt Home">
+      <img src="logo.png" alt="NextBelt Logo" />
+      <span class="logo-text">NextBelt</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+      <span id="menu-icon">☰</span>
+    </button>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">Solutions</a>
+          <ul class="dropdown-menu">
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="platform.html">Platform (SMMS)</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </li>
+        <li><a href="belt-catalog.html">Catalog</a></li>
+        <li><a class="active" href="rmi-audit.html">RMI Audit</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="rmi-hero">
+    <div class="container">
+      <h1>RMI Audit Toolkit</h1>
+      <p>Measure and improve your maintenance organization's maturity with our comprehensive Reliability Maturity Index assessment framework.</p>
+    </div>
+  </section>
+
+  <!-- What is RMI -->
+  <section class="rmi-benefits">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 24px;">What is the Reliability Maturity Index?</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: #666; font-size: 1.125rem;">
+        The RMI is a standardized methodology for evaluating the maturity of maintenance and reliability programs. 
+        It helps organizations identify gaps, benchmark performance, and create targeted improvement roadmaps.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <span class="icon">📊</span>
+          <h4>Objective Scoring</h4>
+          <p>Quantitative assessment across 16 critical dimensions of maintenance excellence</p>
+        </div>
+        <div class="benefit-item">
+          <span class="icon">🎯</span>
+          <h4>Gap Identification</h4>
+          <p>Pinpoint exactly where your organization needs improvement</p>
+        </div>
+        <div class="benefit-item">
+          <span class="icon">📈</span>
+          <h4>Benchmarking</h4>
+          <p>Compare your maturity against industry standards and best practices</p>
+        </div>
+        <div class="benefit-item">
+          <span class="icon">🗺️</span>
+          <h4>Roadmap Creation</h4>
+          <p>Generate actionable improvement plans based on assessment results</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Pillars -->
+  <section class="rmi-pillars">
+    <div class="container">
+      <h2>The Three Pillars of RMI Assessment</h2>
+      
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <span class="pillar-icon">📋</span>
+          <h3>Planning</h3>
+          <p>Strategic foundation for maintenance excellence. Evaluates how your organization plans, schedules, and prioritizes maintenance activities.</p>
+          <ul>
+            <li>Work Order Management</li>
+            <li>PM Program Design</li>
+            <li>Resource Planning</li>
+            <li>Backlog Control</li>
+            <li>KPI Tracking</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-icon">⚙️</span>
+          <h3>Processes</h3>
+          <p>Standardized procedures and workflows. Measures the maturity of your maintenance processes and their consistency across the organization.</p>
+          <ul>
+            <li>Standard Operating Procedures</li>
+            <li>Root Cause Analysis</li>
+            <li>Failure Mode Analysis</li>
+            <li>Spare Parts Management</li>
+            <li>Vendor Management</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-icon">💻</span>
+          <h3>Technology</h3>
+          <p>Digital tools and systems enablement. Assesses your organization's adoption and effective use of maintenance technology and data analytics.</p>
+          <ul>
+            <li>CMMS/EAM Utilization</li>
+            <li>Predictive Maintenance Tools</li>
+            <li>Data Quality & Analytics</li>
+            <li>Mobile Technology Adoption</li>
+            <li>Integration & Automation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Section -->
+  <section class="rmi-login-section">
+    <div class="login-card">
+      <h2>Access RMI Audit Toolkit</h2>
+      <p>Launch comprehensive RMI assessments, track progress, and generate detailed reports with our cloud-based audit platform.</p>
+      <a href="https://rmi-audit-toolkit-frontend-production.up.railway.app" class="login-redirect-btn" target="_blank">
+        Launch Toolkit<span class="arrow">→</span>
+      </a>
+      <p style="font-size: 0.875rem; margin-top: 24px; color: #999;">
+        Need access? Contact <a href="mailto:nextbelt@next-belt.com" style="color: #0D4F4F;">nextbelt@next-belt.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-cta">
+      <h4>Built by Maintainers, For Maintainers</h4>
+      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
+    </div>
+    <div class="footer-bar">
+      <span>AZ ROC #359711</span>
+      <span>Avetta ID: 250472585</span>
+      <span><a href="mailto:nextbelt@next-belt.com">nextbelt@next-belt.com</a></span>
+      <span><a href="tel:+19152355225">915-235-5225</a></span>
+    </div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span class="footer-legal-sep">·</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+    <p>© 2025–2026 NextBelt LLC. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Tawk.to -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    Tawk_API.onLoad = function(){
+      Tawk_API.minimize();
+    };
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68b4a12e0e49f131d3b4b3fa/1j40pb80g';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <style>
+    iframe[title="chat widget"] {
+      max-height: 450px !important;
+      max-width: 350px !important;
+    }
+  </style>
+</body>
+</html>

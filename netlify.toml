@@ -1,0 +1,117 @@
+# ──────────────────────────────────────────────
+# NextBelt — Netlify Configuration
+# ──────────────────────────────────────────────
+
+[build]
+  publish = "."
+
+# ──────────────────────────────────────────────
+# Asset Optimization (post-processing)
+# ──────────────────────────────────────────────
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.images]
+  compress = true
+
+# ──────────────────────────────────────────────
+# Redirects
+# ──────────────────────────────────────────────
+
+# www → root domain
+[[redirects]]
+  from = "https://www.next-belt.com/*"
+  to = "https://next-belt.com/:splat"
+  status = 301
+  force = true
+
+# Custom 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# ──────────────────────────────────────────────
+# Security Headers (all pages)
+# ──────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking
+    X-Frame-Options = "SAMEORIGIN"
+    # Prevent MIME-type sniffing
+    X-Content-Type-Options = "nosniff"
+    # XSS protection (legacy browsers)
+    X-XSS-Protection = "1; mode=block"
+    # Referrer policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Permissions policy
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    # Strict Transport Security (1 year, include subdomains)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Content Security Policy
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://consent.cookiebot.com https://esm.sh https://embed.tawk.to https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://api.emailjs.com https://consent.cookiebot.com https://va.tawk.to wss://ws.tawk.to https://region1.google-analytics.com; frame-src https://www.googletagmanager.com https://consent.cookiebot.com https://tawk.to; object-src 'none'; base-uri 'self'; form-action 'self';"
+
+# ──────────────────────────────────────────────
+# Cache Control — Static Assets
+# ──────────────────────────────────────────────
+
+# Images: cache 1 year (immutable)
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# CSS/JS: cache 1 day (versioned via query string)
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Favicon: cache 1 week
+[[headers]]
+  for = "/favicon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# HTML: no cache (always fresh)
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

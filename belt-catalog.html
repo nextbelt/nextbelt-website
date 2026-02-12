@@ -32,7 +32,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
-  <link rel="stylesheet" href="styles-new.css?v=20251221">
+  <meta name="description" content="Browse NextBelt's conveyor belt catalog — PVC, PVK, PU belts, rollers, and accessories. Filter by type, thickness, and color. Request quotes with SMMS asset tracking." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Conveyor Belt Catalog — NextBelt" />
+  <meta property="og:description" content="Browse PVC, PVK, PU conveyor belts, rollers, and accessories. Filter by type, thickness, and color. Request quotes instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://next-belt.com/belt-catalog.html" />
+  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:site_name" content="NextBelt" />
+  <link rel="canonical" href="https://next-belt.com/belt-catalog.html" />
+
+  <link rel="stylesheet" href="styles-new.css?v=20260211">
   <link rel="preconnect" href="https://esm.sh">
   
   <style>
@@ -82,6 +93,8 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
   <header>
     <a class="logo" href="index.html" aria-label="NextBelt Home">
       <img src="logo.png" alt="NextBelt Logo" />
@@ -102,12 +115,14 @@
           </ul>
         </li>
         <li><a class="active" href="belt-catalog.html">Catalog</a></li>
+        <li><a href="rmi-audit.html">RMI Audit</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#contact" class="btn--nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <main id="main">
   <section class="catalog">
     <div class="container">
       <h1 class="catalog-title">Belt Catalog</h1>
@@ -164,14 +179,18 @@
       <p class="catalog-note">Need a custom size, cleats/sidewalls, guide bars, or roller dimensions? Add details in the notes.</p>
     </div>
   </section>
+  </main>
 
   <footer>
+    <div class="footer-cta">
+      <h4>Built by Maintainers, For Maintainers</h4>
+      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
+    </div>
     <div class="footer-bar">
-      <span><strong>AZ ROC License:</strong> #359711</span>
-      <span><strong>Avetta ID:</strong> 250472585</span>
-      <span><strong>Email:</strong> <a href="mailto:nextbelt@next-belt.com">nextbelt@next-belt.com</a></span>
-      <span><strong>Phone:</strong> <a href="tel:+19152355225">915-235-5225</a></span>
-      <span><a href="#" onclick="window.Cookiebot && Cookiebot.renew(); return false;">Privacy Settings / Do Not Sell or Share</a></span>
+      <span>AZ ROC #359711</span>
+      <span>Avetta ID: 250472585</span>
+      <span><a href="mailto:info@next-belt.com">info@next-belt.com</a></span>
+      <span><a href="tel:+19152355225">915-235-5225</a></span>
     </div>
     <div class="footer-legal">
       <a href="privacy-policy.html">Privacy Policy</a>
@@ -461,7 +480,7 @@ ${notes || 'N/A'}
 Submitted: ${now}`;
 
       const adminParams = {
-        to_email: "nextbelt@next-belt.com",
+        to_email: "info@next-belt.com",
         title: `Quote Request - ${item.type} [${priority}]`,
         name, time: now, message: summary, email, reply_to: email
       };

@@ -1,0 +1,10 @@
+# NextBelt LLC — https://next-belt.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://next-belt.com/sitemap.xml
+
+# Block email templates & internal files
+Disallow: /emailjs-template.html
+Disallow: /emailjs-admin-template.html

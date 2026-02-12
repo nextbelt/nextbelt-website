@@ -27,12 +27,23 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us — NextBelt</title>
+  <title>About Us — NextBelt | Built by Maintainers, For Maintainers</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
-  <link rel="stylesheet" href="styles-new.css?v=20251221">
+  <meta name="description" content="NextBelt is an owner-operated conveyor belt service provider with 30+ years of combined experience. Meet the team of mechanical engineers and Fortune 500 alumni transforming industrial maintenance." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us — NextBelt" />
+  <meta property="og:description" content="Owner-operated conveyor belt service provider with 30+ years of combined experience. Meet our team of reliability engineers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://next-belt.com/about.html" />
+  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:site_name" content="NextBelt" />
+  <link rel="canonical" href="https://next-belt.com/about.html" />
+
+  <link rel="stylesheet" href="styles-new.css?v=20260211">
   <link rel="preconnect" href="https://esm.sh">
 </head>
 <body>
@@ -40,6 +51,8 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDB2L8Z5"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <a class="skip-to-content" href="#main">Skip to content</a>
 
   <header>
     <a class="logo" href="index.html" aria-label="NextBelt Home">
@@ -61,12 +74,14 @@
           </ul>
         </li>
         <li><a href="belt-catalog.html">Catalog</a></li>
+        <li><a href="rmi-audit.html">RMI Audit</a></li>
         <li><a class="active" href="about.html">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#contact" class="btn--nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <main id="main">
   <section class="hero hero--sub">
     <div class="container">
       <p class="hero-eyebrow">Our Story</p>
@@ -75,11 +90,11 @@
     </div>
   </section>
 
-  <!-- Two Column: Team + Intro -->
-  <section class="offerings-section">
+  <!-- Two Column: Team + Story -->
+  <section class="offerings-section fade-up">
     <div class="container">
       <div class="about-grid">
-        <!-- Left: Team (HIDDEN - uncomment when ready to show)
+        <!-- Team Column -->
         <div class="about-team-col">
           <h2>Meet the Reliability Engineers</h2>
           <p class="about-team-subtitle">Mechanical Engineers and Fortune 500 Alumni with combined 30+ years of hands-on experience.</p>
@@ -87,45 +102,44 @@
           <div class="about-team-list">
             <div class="about-team-card">
               <div class="team-avatar">
-                <img src="cchapa.jpg" alt="Cesar Chapa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="img/team/cchapa.jpg" alt="Cesar Chapa" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="team-initials">CC</div>
               </div>
               <div class="about-team-info">
                 <h3>Cesar Chapa</h3>
-                <span class="team-role">Technology Lead</span>
-                <p>Co-Founder driving software innovation and AI-powered maintenance solutions.</p>
+                <span class="team-role">Co-Founder</span>
+                <p>Driving software innovation and AI-powered maintenance solutions. Leading the development of SMMS and digital reliability tools.</p>
               </div>
             </div>
 
             <div class="about-team-card">
               <div class="team-avatar">
-                <img src="sekhongu.jpg" alt="Gurwinder Sekhon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="img/team/sekhongu.jpg" alt="Gurwinder Sekhon" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="team-initials">GS</div>
               </div>
               <div class="about-team-info">
                 <h3>Gurwinder Sekhon</h3>
-                <span class="team-role">Operations</span>
-                <p>Co-Founder overseeing field operations and client relationships.</p>
+                <span class="team-role">Co-Founder</span>
+                <p>Overseeing field operations and client relationships. Ensuring every project meets NextBelt's standards of excellence.</p>
               </div>
             </div>
 
             <div class="about-team-card">
               <div class="team-avatar">
-                <img src="lcochoa.png" alt="Luis Ochoa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="img/team/lcochoa.png" alt="Luis Ochoa" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="team-initials">LO</div>
               </div>
               <div class="about-team-info">
                 <h3>Luis Ochoa</h3>
-                <span class="team-role">Engineering</span>
-                <p>Co-Founder leading mechanical engineering and reliability assessments.</p>
+                <span class="team-role">Co-Founder</span>
+                <p>Leading mechanical engineering and reliability assessments. Bringing deep expertise in conveyor system design and optimization.</p>
               </div>
             </div>
           </div>
         </div>
-        END HIDDEN TEAM SECTION -->
 
-        <!-- Story (now full width) -->
-        <div class="about-story-col" style="grid-column: 1 / -1;">
+        <!-- Story Column -->
+        <div class="about-story-col">
           <div class="about-story-label">Who We Are</div>
           <p>At NextBelt, we specialize in keeping material handling systems moving. As an owner-operated conveyor belt service provider, we deliver fast, reliable solutions that minimize downtime and keep your operations performing at peak efficiency.</p>
 
@@ -138,9 +152,10 @@
   </section>
 
   <!-- Commitment: 2x2 Grid -->
-  <section class="section-dark">
+  <section class="section-dark fade-up">
     <div class="container">
       <div class="commitment-header">
+        <span class="section-eyebrow" style="color: var(--color-accent-light);">Our Values</span>
         <h2>Our Commitment</h2>
         <p>Four pillars that guide everything we do</p>
       </div>
@@ -169,16 +184,25 @@
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="cta-banner fade-up">
+    <div class="container">
+      <h2>Ready to Transform Your Maintenance?</h2>
+      <p>Let's discuss how we can help reduce your downtime and optimize your operations.</p>
+      <a href="index.html#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+  </main>
+
   <footer>
     <div class="footer-cta">
-      <h4>Ready to Transform Your Maintenance?</h4>
-      <p>Let's discuss how we can help reduce your downtime and optimize your operations.</p>
-      <a href="index.html#contact" class="btn" style="margin-top: 16px;">Get in Touch</a>
+      <h4>Built by Maintainers, For Maintainers</h4>
+      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
     </div>
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
       <span>Avetta ID: 250472585</span>
-      <span><a href="mailto:nextbelt@next-belt.com">nextbelt@next-belt.com</a></span>
+      <span><a href="mailto:info@next-belt.com">info@next-belt.com</a></span>
       <span><a href="tel:+19152355225">915-235-5225</a></span>
     </div>
     <div class="footer-legal">
@@ -198,6 +222,26 @@
   <!-- Tawk.to -->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    Tawk_API.onLoad = function(){
+      Tawk_API.minimize();
+    };
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68b4a12e0e49f131d3b4b3fa/1j40pb80g';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <style>
+    iframe[title="chat widget"] {
+      max-height: 450px !important;
+      max-width: 350px !important;
+    }
+  </style>
+</body>
+</html>
     Tawk_API.onLoad = function(){
       Tawk_API.minimize();
     };

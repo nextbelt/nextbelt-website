@@ -27,214 +27,23 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RMI Audit Toolkit — NextBelt</title>
+  <title>RMI Audit Toolkit — Reliability Maturity Index Assessment | NextBelt</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
-  <meta name="description" content="Reliability Maturity Index (RMI) Assessment Tool. Evaluate and benchmark your maintenance organization's maturity across Planning, Processes, and Technology." />
+  <meta name="description" content="Reliability Maturity Index (RMI) Assessment Tool. Evaluate and benchmark your maintenance organization's maturity across People, Processes, and Technology." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RMI Audit Toolkit — Reliability Maturity Index Assessment" />
+  <meta property="og:description" content="Evaluate and benchmark your maintenance organization's maturity across People, Processes, and Technology with NextBelt's RMI framework." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://next-belt.com/rmi-audit.html" />
+  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:site_name" content="NextBelt" />
+  <link rel="canonical" href="https://next-belt.com/rmi-audit.html" />
   
-  <link rel="stylesheet" href="styles-new.css?v=20251221" />
-  <style>
-    .rmi-hero {
-      background: linear-gradient(135deg, #0D4F4F 0%, #1a6b6b 100%);
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    .rmi-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .rmi-hero p {
-      font-size: 1.25rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      opacity: 0.9;
-    }
-
-    .rmi-pillars {
-      padding: 80px 20px;
-      background: #F8F7F4;
-    }
-
-    .rmi-pillars .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .rmi-pillars h2 {
-      text-align: center;
-      margin-bottom: 60px;
-      font-size: 2.5rem;
-    }
-
-    .pillar-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .pillar-card {
-      background: white;
-      padding: 40px;
-      border-radius: 8px;
-      border: 2px solid #D1D0CC;
-      transition: all 0.3s ease;
-    }
-
-    .pillar-card:hover {
-      border-color: #C65D3B;
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-
-    .pillar-icon {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .pillar-card h3 {
-      color: #0D4F4F;
-      margin-bottom: 16px;
-      font-size: 1.75rem;
-    }
-
-    .pillar-card p {
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .pillar-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .pillar-card li {
-      padding: 8px 0;
-      border-bottom: 1px solid #F0F0F0;
-      color: #666;
-    }
-
-    .pillar-card li:before {
-      content: "✓ ";
-      color: #C65D3B;
-      font-weight: bold;
-      margin-right: 8px;
-    }
-
-    .rmi-benefits {
-      padding: 80px 20px;
-      background: white;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 40px auto 0;
-    }
-
-    .benefit-item {
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    .benefit-item .icon {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .benefit-item h4 {
-      color: #0D4F4F;
-      margin-bottom: 12px;
-      font-size: 1.25rem;
-    }
-
-    .benefit-item p {
-      color: #666;
-      line-height: 1.5;
-    }
-
-    .rmi-login-section {
-      padding: 80px 20px;
-      background: #F8F7F4;
-      text-align: center;
-    }
-
-    .login-card {
-      max-width: 500px;
-      margin: 0 auto;
-      background: white;
-      padding: 60px 40px;
-      border-radius: 8px;
-      border: 2px solid #D1D0CC;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-
-    .login-card h2 {
-      margin-bottom: 16px;
-      color: #0D4F4F;
-    }
-
-    .login-card p {
-      color: #666;
-      margin-bottom: 40px;
-    }
-
-    .login-redirect-btn {
-      display: inline-block;
-      padding: 16px 48px;
-      background: #0D4F4F;
-      color: white;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.125rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 4px;
-      border: 2px solid #0D4F4F;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .login-redirect-btn:hover {
-      background: #0a3d3d;
-      border-color: #0a3d3d;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(13, 79, 79, 0.3);
-    }
-
-    .login-redirect-btn .arrow {
-      margin-left: 8px;
-      transition: margin-left 0.3s ease;
-    }
-
-    .login-redirect-btn:hover .arrow {
-      margin-left: 12px;
-    }
-
-    @media (max-width: 768px) {
-      .rmi-hero h1 {
-        font-size: 2rem;
-      }
-
-      .pillar-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .login-card {
-        padding: 40px 24px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles-new.css?v=20260211" />
 </head>
 
 <body>
@@ -242,6 +51,8 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDB2L8Z5"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <a class="skip-to-content" href="#main">Skip to content</a>
 
   <header>
     <a class="logo" href="index.html" aria-label="NextBelt Home">
@@ -265,46 +76,57 @@
         <li><a href="belt-catalog.html">Catalog</a></li>
         <li><a class="active" href="rmi-audit.html">RMI Audit</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#contact" class="btn--nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <main id="main">
   <!-- Hero -->
   <section class="rmi-hero">
     <div class="container">
+      <p class="hero-eyebrow" style="color: rgba(255,255,255,0.7);">Assessment Framework</p>
       <h1>RMI Audit Toolkit</h1>
       <p>Measure and improve your maintenance organization's maturity with our comprehensive Reliability Maturity Index assessment framework.</p>
     </div>
   </section>
 
   <!-- What is RMI -->
-  <section class="rmi-benefits">
+  <section class="rmi-benefits fade-up">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 24px;">What is the Reliability Maturity Index?</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: #666; font-size: 1.125rem;">
+      <span class="section-eyebrow">Framework</span>
+      <h2>What is the Reliability Maturity Index?</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto var(--space-2xl); color: var(--color-text-secondary); font-size: var(--text-lg);">
         The RMI is a standardized methodology for evaluating the maturity of maintenance and reliability programs. 
         It helps organizations identify gaps, benchmark performance, and create targeted improvement roadmaps.
       </p>
 
       <div class="benefits-grid">
         <div class="benefit-item">
-          <span class="icon">📊</span>
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <h4>Objective Scoring</h4>
           <p>Quantitative assessment across 16 critical dimensions of maintenance excellence</p>
         </div>
         <div class="benefit-item">
-          <span class="icon">🎯</span>
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="12" cy="12" r="2" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+          </div>
           <h4>Gap Identification</h4>
           <p>Pinpoint exactly where your organization needs improvement</p>
         </div>
         <div class="benefit-item">
-          <span class="icon">📈</span>
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <h4>Benchmarking</h4>
           <p>Compare your maturity against industry standards and best practices</p>
         </div>
         <div class="benefit-item">
-          <span class="icon">🗺️</span>
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="2" x2="8" y2="18" stroke="currentColor" stroke-width="2"/><line x1="16" y1="6" x2="16" y2="22" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
           <h4>Roadmap Creation</h4>
           <p>Generate actionable improvement plans based on assessment results</p>
         </div>
@@ -313,26 +135,31 @@
   </section>
 
   <!-- Three Pillars -->
-  <section class="rmi-pillars">
+  <section class="rmi-pillars fade-up">
     <div class="container">
+      <span class="section-eyebrow">Three Pillars</span>
       <h2>The Three Pillars of RMI Assessment</h2>
       
       <div class="pillar-grid">
         <div class="pillar-card">
-          <span class="pillar-icon">📋</span>
-          <h3>Planning</h3>
-          <p>Strategic foundation for maintenance excellence. Evaluates how your organization plans, schedules, and prioritizes maintenance activities.</p>
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" fill="none" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>People</h3>
+          <p>Workforce capability and culture. Evaluates technician competency, knowledge transfer mechanisms, and cultural alignment with reliability goals.</p>
           <ul>
-            <li>Work Order Management</li>
-            <li>PM Program Design</li>
-            <li>Resource Planning</li>
-            <li>Backlog Control</li>
-            <li>KPI Tracking</li>
+            <li>Technician Competency</li>
+            <li>Training &amp; Development</li>
+            <li>Knowledge Transfer</li>
+            <li>Cultural Alignment</li>
+            <li>Leadership &amp; Accountability</li>
           </ul>
         </div>
 
         <div class="pillar-card">
-          <span class="pillar-icon">⚙️</span>
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+          </div>
           <h3>Processes</h3>
           <p>Standardized procedures and workflows. Measures the maturity of your maintenance processes and their consistency across the organization.</p>
           <ul>
@@ -345,15 +172,17 @@
         </div>
 
         <div class="pillar-card">
-          <span class="pillar-icon">💻</span>
-          <h3>Technology</h3>
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" fill="none" stroke-width="2"/><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Technology &amp; Tools</h3>
           <p>Digital tools and systems enablement. Assesses your organization's adoption and effective use of maintenance technology and data analytics.</p>
           <ul>
             <li>CMMS/EAM Utilization</li>
             <li>Predictive Maintenance Tools</li>
-            <li>Data Quality & Analytics</li>
+            <li>Data Quality &amp; Analytics</li>
             <li>Mobile Technology Adoption</li>
-            <li>Integration & Automation</li>
+            <li>Integration &amp; Automation</li>
           </ul>
         </div>
       </div>
@@ -361,18 +190,19 @@
   </section>
 
   <!-- Login Section -->
-  <section class="rmi-login-section">
+  <section class="rmi-login-section fade-up">
     <div class="login-card">
       <h2>Access RMI Audit Toolkit</h2>
       <p>Launch comprehensive RMI assessments, track progress, and generate detailed reports with our cloud-based audit platform.</p>
-      <a href="https://rmi-audit-toolkit-frontend-production.up.railway.app" class="login-redirect-btn" target="_blank">
-        Launch Toolkit<span class="arrow">→</span>
+      <a href="https://rmi-audit-toolkit-frontend-production.up.railway.app" class="login-redirect-btn" target="_blank" rel="noopener noreferrer">
+        Launch Toolkit <span class="arrow">→</span>
       </a>
-      <p style="font-size: 0.875rem; margin-top: 24px; color: #999;">
-        Need access? Contact <a href="mailto:nextbelt@next-belt.com" style="color: #0D4F4F;">nextbelt@next-belt.com</a>
+      <p style="font-size: var(--text-sm); margin-top: var(--space-lg); color: var(--color-text-muted);">
+        Need access? Contact <a href="mailto:info@next-belt.com" style="color: var(--color-primary);">info@next-belt.com</a>
       </p>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -383,7 +213,7 @@
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
       <span>Avetta ID: 250472585</span>
-      <span><a href="mailto:nextbelt@next-belt.com">nextbelt@next-belt.com</a></span>
+      <span><a href="mailto:info@next-belt.com">info@next-belt.com</a></span>
       <span><a href="tel:+19152355225">915-235-5225</a></span>
     </div>
     <div class="footer-legal">

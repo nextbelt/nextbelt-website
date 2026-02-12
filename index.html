@@ -33,8 +33,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
   <meta name="description" content="NextBelt combines AI-driven maintenance software with expert field services. Track assets, predict downtime, automate work orders, and get precision belt services nationwide." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NextBelt — Intelligent Maintenance Solutions" />
+  <meta property="og:description" content="NextBelt combines AI-driven maintenance software with expert field services. Track assets, predict downtime, automate work orders, and get precision belt services nationwide." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://next-belt.com/" />
+  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:site_name" content="NextBelt" />
+  <link rel="canonical" href="https://next-belt.com/" />
   
-  <link rel="stylesheet" href="styles-new.css?v=20251221" />
+  <link rel="stylesheet" href="styles-new.css?v=20260211" />
   <link rel="preconnect" href="https://esm.sh">
 </head>
 
@@ -43,6 +52,8 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDB2L8Z5"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <a class="skip-to-content" href="#main">Skip to content</a>
 
   <header>
     <a class="logo" href="index.html" aria-label="NextBelt Home">
@@ -66,33 +77,34 @@
         <li><a href="belt-catalog.html">Catalog</a></li>
         <li><a href="rmi-audit.html">RMI Audit</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn--nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <main id="main">
+  <section class="hero hero--mesh">
     <div style="max-width: 800px; margin: 0 auto; position: relative;">
       <div class="hero-brand">
         <img src="logo.png" alt="NextBelt Logo" />
         <span>NextBelt</span>
       </div>
-      <h1>Intelligent Maintenance.<br>Unstoppable Operations.</h1>
-      <p>The only partner combining predictive maintenance software with expert field service execution.</p>
+      <h1>Predict Failures.<br>Prevent Downtime.</h1>
+      <p>The only partner combining predictive maintenance software with expert field service execution — nationwide.</p>
       <div class="hero-cta-group">
-        <a href="platform.html" class="btn">Explore Platform</a>
-        <a href="belt-catalog.html" class="btn-outline">View Catalog</a>
+        <a href="platform.html" class="btn">Explore Solutions</a>
+        <a href="#contact" class="btn-outline">Request a Quote</a>
       </div>
       <p class="certs">AZ ROC #359711 · Avetta Compliant · Nationwide Service</p>
     </div>
   </section>
 
   <!-- Metrics Bar -->
-  <section class="metrics-bar">
+  <section class="metrics-bar fade-up">
     <div class="metrics-grid">
       <div class="metric-item">
-        <div class="metric-value">30%</div>
+        <div class="metric-value stat-counter" data-count-to="30" data-count-suffix="%">0%</div>
         <div class="metric-label">Downtime Reduction</div>
       </div>
       <div class="metric-item">
@@ -100,11 +112,11 @@
         <div class="metric-label">Asset Monitoring</div>
       </div>
       <div class="metric-item">
-        <div class="metric-value">847+</div>
+        <div class="metric-value stat-counter" data-count-to="847" data-count-suffix="+">0+</div>
         <div class="metric-label">Assets Managed</div>
       </div>
       <div class="metric-item">
-        <div class="metric-value">20+</div>
+        <div class="metric-value stat-counter" data-count-to="20" data-count-suffix="+">0+</div>
         <div class="metric-label">Years Experience</div>
       </div>
     </div>
@@ -185,8 +197,9 @@
   </section>
 
   <!-- Three Pillars -->
-  <section class="offerings-section" id="offerings">
+  <section class="offerings-section fade-up" id="offerings">
     <div class="container">
+      <span class="section-eyebrow">What We Do</span>
       <h2>Complete Maintenance Ecosystem</h2>
       <p>Everything you need to transform reactive maintenance into predictive excellence.</p>
       
@@ -216,7 +229,7 @@
   </section>
 
   <!-- Methodology -->
-  <section class="methodology-section" id="methodology">
+  <section class="methodology-section fade-up" id="methodology">
     <div class="container">
       <h2>We Don't Just Fix Breaks—<br>We Analyze Why They Happened</h2>
       <p>Our consulting methodology bridges Operations and Maintenance to deliver lasting improvements.</p>
@@ -250,17 +263,18 @@
   </section>
 
   <!-- Catalog CTA -->
-  <section class="about" id="catalog">
+  <section class="cta-banner fade-up" id="catalog">
     <div class="container">
-      <h2>Belt Catalog</h2>
+      <h2>Browse Our Belt Catalog</h2>
       <p>Belts, rollers, and accessories for telescopic and curved conveyor systems. Search, filter, and request quotes.</p>
-      <a class="btn btn-secondary" href="belt-catalog.html">Open Catalog</a>
+      <a class="btn" href="belt-catalog.html">Open Catalog</a>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="contact" id="contact">
+  <section class="contact fade-up" id="contact">
     <div class="container">
+      <span class="section-eyebrow">Contact</span>
       <h2>Get in Touch</h2>
       <form id="contact-form" novalidate>
         <label for="hp_site" class="sr-only">Leave this field empty</label>
@@ -274,6 +288,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer>
     <div class="footer-cta">
@@ -283,7 +299,7 @@
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
       <span>Avetta ID: 250472585</span>
-      <span><a href="mailto:nextbelt@next-belt.com">nextbelt@next-belt.com</a></span>
+      <span><a href="mailto:info@next-belt.com">info@next-belt.com</a></span>
       <span><a href="tel:+19152355225">915-235-5225</a></span>
     </div>
     <div class="footer-legal">

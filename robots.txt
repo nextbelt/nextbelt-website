@@ -8,4 +8,3 @@ Sitemap: https://next-belt.com/sitemap.xml
 # Block email templates & internal files
 Disallow: /emailjs-template.html
 Disallow: /emailjs-admin-template.html
-Disallow: /contract.html

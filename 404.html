@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found — NextBelt</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <link rel="stylesheet" href="/styles-new.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/styles-new.css?v=20260213" />
   <style>
     .error-page {
       min-height: 80vh;
@@ -49,11 +55,16 @@
 </head>
 <body>
 
+  <a class="skip-to-content" href="#main">Skip to content</a>
+
   <header>
     <a class="logo" href="/" aria-label="NextBelt Home">
       <img src="/logo.png" alt="NextBelt Logo" />
       <span class="logo-text">NextBelt</span>
     </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileMenu()">
+      <span id="menu-icon">☰</span>
+    </button>
     <nav id="mobile-nav">
       <ul>
         <li><a href="/">Home</a></li>
@@ -65,6 +76,7 @@
     </nav>
   </header>
 
+  <main id="main">
   <section class="error-page">
     <div class="error-content">
       <div class="error-code">404</div>
@@ -76,11 +88,12 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="footer-cta">
       <h4>Built by Maintainers, For Maintainers</h4>
-      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
+      <p>Reliability and maintenance engineers — Fortune 500 alumni with 30+ years on the plant floor. We don’t sell theory; we’ve run the work orders.</p>
     </div>
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
@@ -96,5 +109,6 @@
     <p>© 2025–2026 NextBelt LLC. All rights reserved.</p>
   </footer>
 
+  <script src="/script.js?v=20260213"></script>
 </body>
 </html>

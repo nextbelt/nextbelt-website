@@ -38,12 +38,17 @@
   <meta property="og:title" content="SMMS Platform — Smart Maintenance Management System" />
   <meta property="og:description" content="AI-powered software for asset tracking, predictive maintenance, automated work orders, and real-time analytics." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://next-belt.com/platform.html" />
-  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:url" content="https://next-belt.com/platform" />
+  <meta property="og:image" content="https://next-belt.com/og-image.png" />
   <meta property="og:site_name" content="NextBelt" />
-  <link rel="canonical" href="https://next-belt.com/platform.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://next-belt.com/og-image.png" />
+  <link rel="canonical" href="https://next-belt.com/platform" />
   
-  <link rel="stylesheet" href="styles-new.css?v=20260211" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles-new.css?v=20260213" />
   <link rel="preconnect" href="https://esm.sh">
 </head>
 
@@ -60,14 +65,14 @@
       <img src="logo.png" alt="NextBelt Logo" />
       <span class="logo-text">NextBelt</span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileMenu()">
       <span id="menu-icon">☰</span>
     </button>
     <nav id="mobile-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li class="nav-dropdown">
-          <a href="#">Solutions</a>
+          <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
           <ul class="dropdown-menu">
             <li><a href="consulting.html">Consulting</a></li>
             <li><a class="active" href="platform.html">Platform (SMMS)</a></li>
@@ -88,7 +93,7 @@
     <div style="max-width: 900px; margin: 0 auto;">
       <p class="hero-eyebrow">Smart Maintenance Management System</p>
       <h1>The Future of Maintenance<br>Is Predictive</h1>
-      <p>Stop reacting to breakdowns. Start preventing them. SMMS gives you complete visibility into your equipment health with AI-powered insights.</p>
+      <p>Trade the reactive firefight for a plan. SMMS surfaces asset health, catches failure modes early, and turns condition data into work you can schedule before the line goes down.</p>
       <div class="hero-cta-group">
         <a href="#demo" class="btn">Request a Demo</a>
         <a href="#features" class="btn-outline">Explore Features</a>
@@ -122,43 +127,43 @@
   <section class="section-dark" id="features">
     <div class="container">
       <h2>System of Record to System of Intelligence</h2>
-      <p>Close the "Governance Gap." Enterprise-grade standardization with the usability of modern SaaS.</p>
+      <p>Close the governance gap between corporate standards and the floor. The structure your reliability program needs, in a tool techs will actually use.</p>
       
       <div class="feature-grid">
         <div class="feature-card">
           <span class="feature-label">Standards</span>
           <h3>ISO 14224 Compliance</h3>
-          <p>Standardized 9-level asset hierarchy allows for true global benchmarking and consistent data rollups across all your facilities.</p>
+          <p>A consistent 9-level asset hierarchy per ISO 14224, so failure data rolls up cleanly and MTBF and MTTR mean the same thing at every site.</p>
         </div>
         
         <div class="feature-card">
           <span class="feature-label">Risk</span>
           <h3>AIAG-VDA Risk Analysis</h3>
-          <p>Built-in FMEA (Failure Mode and Effects Analysis) compliant with 2019 standards, including automated RPN calculations.</p>
+          <p>Run FMEA where the assets live, aligned to the 2019 AIAG-VDA method, with RPN scoring built in to rank failure modes and drive criticality-based PMs.</p>
         </div>
         
         <div class="feature-card">
           <span class="feature-label">Integration</span>
           <h3>Zero Disruption "Overlay"</h3>
-          <p>We do not "rip and replace." We overlay intelligence onto your existing ERP or spreadsheets to unlock value without migration headaches.</p>
+          <p>No rip-and-replace. SMMS sits on top of the ERP, CMMS, or spreadsheets you already run, so you get reliability intelligence without a data migration or a year of downtime.</p>
         </div>
         
         <div class="feature-card">
           <span class="feature-label">Intelligence</span>
           <h3>Downtime Intelligence</h3>
-          <p>AI confidence scoring combined with impact weighting helps you prioritize which breakdowns to address first.</p>
+          <p>Every downtime event is scored by likely root cause and weighted by production impact, so your planners chase the failures that actually move the planned-vs-reactive ratio.</p>
         </div>
         
         <div class="feature-card">
           <span class="feature-label">Mobile</span>
           <h3>Technician-First Mobile</h3>
-          <p>Designed for the floor, not the office. Mobile sign-offs, photo capture, and offline mode ensure adoption by the people doing the work.</p>
+          <p>Built for the wrench, not the desk. Sign off work orders, capture photos, and log readings from your phone, online or off, so wrench time goes to the asset instead of the keyboard.</p>
         </div>
         
         <div class="feature-card">
           <span class="feature-label">Speed</span>
           <h3>Day-1 Value</h3>
-          <p>Avoid the 18-month roadmap delays of legacy ERPs. Our "Feature Flags" allow site-specific capabilities without breaking enterprise standards.</p>
+          <p>Skip the 18-month rollout that legacy ERPs demand. Turn on site-specific capabilities with feature flags, so each plant gets what it needs without breaking the corporate data standard.</p>
         </div>
       </div>
     </div>
@@ -168,7 +173,7 @@
   <section class="methodology-section">
     <div class="container">
       <h2>How SMMS Works</h2>
-      <p>From initial setup to continuous improvement, here's how NextBelt transforms your maintenance operations.</p>
+      <p>From asset registry to defect elimination, here's how SMMS moves your program from reactive to planned.</p>
       
       <div class="methodology-grid">
         <div class="methodology-item">
@@ -186,13 +191,13 @@
         <div class="methodology-item">
           <div class="methodology-number">03</div>
           <h3>Monitor & Predict</h3>
-          <p>AI analyzes incoming data to identify patterns and predict failures before they cause downtime.</p>
+          <p>Condition data and trends flag developing faults early, so you intervene during a planned window instead of at 2 a.m.</p>
         </div>
         
         <div class="methodology-item">
           <div class="methodology-number">04</div>
           <h3>Optimize Continuously</h3>
-          <p>Use insights to refine maintenance strategies, reduce costs, and extend equipment life.</p>
+          <p>Feed real failure history back into your PM intervals and spares stocking, eliminate repeat defects, and stretch asset life.</p>
         </div>
       </div>
     </div>
@@ -202,7 +207,7 @@
   <section class="section-dark">
     <div class="container">
       <h2>See SMMS in Action</h2>
-      <p>A glimpse into the dashboard that operations managers rely on every day.</p>
+      <p>The dashboard your planners and supervisors open first: uptime, open work orders, asset count, and live alerts at a glance.</p>
       
       <div class="device-showcase">
         <div class="device-frame">
@@ -273,20 +278,20 @@
   <!-- Use Cases -->
   <section class="offerings-section">
     <div class="container">
-      <h2>Built for Your Industry</h2>
+      <h2>Built for High-Throughput Operations</h2>
       <p>SMMS adapts to the unique needs of material handling and logistics operations.</p>
       
       <div class="offerings-grid">
         <div class="offering-card">
           <span class="offering-number">Distribution</span>
           <h3>Distribution Centers</h3>
-          <p>Keep sortation systems, conveyors, and packaging equipment running at peak efficiency during peak seasons.</p>
+          <p>Keep sorters, conveyors, and packaging lines available when peak volume hits, with PM scheduled around your throughput, not against it.</p>
         </div>
 
         <div class="offering-card">
           <span class="offering-number">Manufacturing</span>
           <h3>Manufacturing</h3>
-          <p>Coordinate maintenance across production lines without disrupting output or quality.</p>
+          <p>Plan PMs and shutdowns around the production schedule so changeovers and line speed stay protected.</p>
         </div>
 
         <div class="offering-card">
@@ -349,16 +354,21 @@
   <section class="contact" id="demo">
     <div class="container">
       <h2>Request a Demo</h2>
-      <p style="text-align: center; max-width: 600px; margin: 0 auto 32px;">See how SMMS can transform your maintenance operations. Fill out the form below and our team will schedule a personalized demo.</p>
+      <p style="text-align: center; max-width: 600px; margin: 0 auto 32px;">Tell us your asset count and where you're losing uptime. We'll walk you through SMMS on your equipment and your failure modes, no slideware.</p>
       
       <form id="demo-form" novalidate>
         <label for="hp_site" class="sr-only">Leave this field empty</label>
         <input type="text" id="hp_site" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
-        <input type="email" id="email" name="email" placeholder="Work Email" required />
+        <label class="sr-only" for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true" />
+        <label class="sr-only" for="email">Work Email</label>
+        <input type="email" id="email" name="email" placeholder="Work Email" required aria-required="true" />
+        <label class="sr-only" for="company">Company Name</label>
         <input type="text" id="company" name="company" placeholder="Company Name" />
+        <label class="sr-only" for="subject">Number of Assets (approximate)</label>
         <input type="text" id="subject" name="subject" placeholder="Number of Assets (approximate)" />
-        <textarea id="user_message" name="user_message" placeholder="Tell us about your maintenance challenges..." required></textarea>
+        <label class="sr-only" for="user_message">Tell us about your maintenance challenges</label>
+        <textarea id="user_message" name="user_message" placeholder="Tell us about your maintenance challenges..." required aria-required="true"></textarea>
         <button type="submit">Request Demo</button>
       </form>
     </div>
@@ -368,7 +378,7 @@
   <footer>
     <div class="footer-cta">
       <h4>Built by Maintainers, For Maintainers</h4>
-      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
+      <p>Reliability and maintenance engineers — Fortune 500 alumni with 30+ years on the plant floor. We don’t sell theory; we’ve run the work orders.</p>
     </div>
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
@@ -390,7 +400,7 @@
     import emailjs from 'https://esm.sh/@emailjs/browser';
     window.emailjs = emailjs;
   </script>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260213"></script>
 
   <!-- Tawk.to -->
   <script type="text/javascript">

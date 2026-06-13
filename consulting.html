@@ -38,12 +38,17 @@
   <meta property="og:title" content="Reliability Maturity Index (RMI) — NextBelt Consulting" />
   <meta property="og:description" content="Escape the reactive spiral with NextBelt's RMI assessment. Measure your gap between reactive chaos and predictive precision." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://next-belt.com/consulting.html" />
-  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:url" content="https://next-belt.com/consulting" />
+  <meta property="og:image" content="https://next-belt.com/og-image.png" />
   <meta property="og:site_name" content="NextBelt" />
-  <link rel="canonical" href="https://next-belt.com/consulting.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://next-belt.com/og-image.png" />
+  <link rel="canonical" href="https://next-belt.com/consulting" />
 
-  <link rel="stylesheet" href="styles-new.css?v=20260211">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles-new.css?v=20260213">
   <link rel="preconnect" href="https://esm.sh">
 </head>
 <body>
@@ -59,14 +64,14 @@
       <img src="logo.png" alt="NextBelt Logo" />
       <span class="logo-text">NextBelt</span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileMenu()">
       <span id="menu-icon">☰</span>
     </button>
     <nav id="mobile-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li class="nav-dropdown">
-          <a href="#">Solutions</a>
+          <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
           <ul class="dropdown-menu">
             <li><a class="active" href="consulting.html">Consulting</a></li>
             <li><a href="platform.html">Platform (SMMS)</a></li>
@@ -84,12 +89,12 @@
   <main id="main">
   <section class="hero hero--sub">
     <div class="container">
-      <p class="hero-eyebrow">Strategic Assessment</p>
+      <p class="hero-eyebrow">Reliability Maturity Index</p>
       <h1>Escape the "Reactive Spiral"</h1>
       <p style="max-width: 700px; margin: 0 auto 32px;">
-        70% of maintenance teams are stuck in "Firefighting Mode." The Reliability Maturity Index (RMI) measures your gap between reactive chaos and predictive precision.
+        70% of maintenance teams run reactive — wrench time burned on breakdowns, not defect elimination. The Reliability Maturity Index (RMI) scores exactly how far you sit from a planned, predictive operation, and what's standing in the way.
       </p>
-      <a href="#packages" class="btn">View Assessment Packages</a>
+      <a href="#packages" class="btn">See Engagement Tiers</a>
     </div>
   </section>
 
@@ -97,23 +102,23 @@
     <div class="container">
       <h2>The RMI Framework</h2>
       <p style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
-        We assess your organization across three critical dimensions to reveal structural factors limiting performance.
+        We score your operation across People, Process, and Technology — the three pillars that decide whether reliability sticks or slides back into reactive.
       </p>
       <div class="offerings-grid">
         <div class="offering-card">
           <span class="offering-number">01 — People</span>
           <h3>Workforce Capability</h3>
-          <p>We assess technician competency, knowledge transfer mechanisms, and cultural alignment with reliability goals.</p>
+          <p>We gauge technician skill depth, how tribal knowledge gets captured and handed off, and whether the floor actually owns reliability — or just chases the next breakdown.</p>
         </div>
         <div class="offering-card">
           <span class="offering-number">02 — Process</span>
           <h3>Operational Discipline</h3>
-          <p>We evaluate planning & scheduling discipline, PM effectiveness, and standard operating procedures (SOPs).</p>
+          <p>We test your planning & scheduling discipline, planned-vs-reactive ratio, whether PMs are catching defects or just burning labor, and how well RCA closes the loop on repeat failures.</p>
         </div>
         <div class="offering-card">
           <span class="offering-number">03 — Technology</span>
           <h3>Systems & Data</h3>
-          <p>We analyze data integrity, ISO 14224 compliance, and how effectively your CMMS supports reliability.</p>
+          <p>We check whether your failure data is clean and ISO 14224-aligned, and whether your CMMS is actually driving PdM decisions — or just logging work orders after the fact.</p>
         </div>
       </div>
     </div>
@@ -122,28 +127,28 @@
   <section class="section-dark">
     <div class="container">
       <h2>Our Methodology</h2>
-      <p>We don't just interview executives—we get on the floor with your technicians to find the ground truth.</p>
+      <p>We don't run on conference-room interviews. We get on the floor, ride along on work orders, and pull the real data — because the spreadsheet and the asset rarely tell the same story.</p>
       
       <div class="methodology-grid" style="margin-top: 40px;">
         <div class="methodology-item">
           <div class="methodology-number">01</div>
           <h3>Discovery</h3>
-          <p>On-site interviews and job shadowing. We review actual maintenance practices in real-time.</p>
+          <p>On-site interviews and job shadowing. We watch how work really gets planned, executed, and closed out — not how the binder says it should.</p>
         </div>
         <div class="methodology-item">
           <div class="methodology-number">02</div>
           <h3>Analysis</h3>
-          <p>Comprehensive review of work order history, failure patterns, and inventory data integrity.</p>
+          <p>We mine work order history for failure patterns and bad-actor assets, check MRO/spares accuracy, and surface the defects driving your unplanned downtime.</p>
         </div>
         <div class="methodology-item">
           <div class="methodology-number">03</div>
           <h3>The Scorecard</h3>
-          <p>You receive a Reliability Maturity Score (1-5) with detailed breakdowns and benchmarking.</p>
+          <p>You get a Reliability Maturity Score (1-5) per pillar, with the specific gaps holding each one back — no vague letter grade, an actual diagnosis.</p>
         </div>
         <div class="methodology-item">
           <div class="methodology-number">04</div>
           <h3>The Roadmap</h3>
-          <p>A prioritized action plan to move from Reactive to Predictive maintenance.</p>
+          <p>A prioritized roadmap — sequenced and resourced — to shift wrench time from reactive firefighting toward planned, predictive maintenance.</p>
         </div>
       </div>
     </div>
@@ -152,7 +157,7 @@
   <section class="packages-section" id="packages">
     <div class="container">
       <h2>Engagement Models</h2>
-      <p style="text-align: center; max-width: 600px; margin: 0 auto 40px;">Choose the level of engagement that matches your organization's needs.</p>
+      <p style="text-align: center; max-width: 600px; margin: 0 auto 40px;">Start with a baseline score, or go further into implementation — pick the level of support your team is ready to execute on.</p>
       
       <div class="packages-grid">
         <div class="package-card">
@@ -167,7 +172,7 @@
             <li>Detailed Reliability Maturity Score across all three pillars</li>
             <li>Executive summary with prioritized findings</li>
           </ul>
-          <p class="package-ideal"><strong>Ideal for:</strong> Organizations seeking a baseline reliability assessment and strategic direction.</p>
+          <p class="package-ideal"><strong>Ideal for:</strong> Teams that need an honest baseline RMI score and a clear-eyed read on where the reliability gaps actually are.</p>
           <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Get Quote</a>
         </div>
         
@@ -184,7 +189,7 @@
             <li>Process redesign and training support</li>
             <li>Progress tracking and adjustment sessions</li>
           </ul>
-          <p class="package-ideal"><strong>Ideal for:</strong> Teams ready to execute meaningful change with expert guidance.</p>
+          <p class="package-ideal"><strong>Ideal for:</strong> Teams ready to build out PM/PdM programs and move the planned-vs-reactive needle with hands-on coaching.</p>
           <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Contact Us</a>
         </div>
 
@@ -202,7 +207,7 @@
             <li>User training and change management support</li>
             <li>Technology-enabled reliability improvements</li>
           </ul>
-          <p class="package-ideal"><strong>Ideal for:</strong> Organizations seeking both strategic guidance and modern maintenance technology.</p>
+          <p class="package-ideal"><strong>Ideal for:</strong> Teams that want the assessment plus a real-data trial of SMMS — proving the toolset on your own assets before you commit.</p>
           <a href="index.html#contact" class="btn" style="width: 100%;">Start Pilot</a>
         </div>
       </div>
@@ -213,7 +218,7 @@
   <footer>
     <div class="footer-cta">
       <h4>Built by Maintainers, For Maintainers</h4>
-      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
+      <p>Reliability and maintenance engineers — Fortune 500 alumni with 30+ years on the plant floor. We don’t sell theory; we’ve run the work orders.</p>
     </div>
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
@@ -231,7 +236,7 @@
 
   <div id="toast" class="toast"></div>
   
-  <script src="script.js"></script>
+  <script src="script.js?v=20260213"></script>
 
   <!-- Tawk.to -->
   <script type="text/javascript">

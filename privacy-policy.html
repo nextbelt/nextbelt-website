@@ -38,12 +38,17 @@
   <meta property="og:title" content="Privacy Policy — NextBelt LLC" />
   <meta property="og:description" content="Learn how NextBelt collects, uses, and protects your personal data when you use our website and SMMS platform." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://next-belt.com/privacy-policy.html" />
-  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:url" content="https://next-belt.com/privacy-policy" />
+  <meta property="og:image" content="https://next-belt.com/og-image.png" />
   <meta property="og:site_name" content="NextBelt" />
-  <link rel="canonical" href="https://next-belt.com/privacy-policy.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://next-belt.com/og-image.png" />
+  <link rel="canonical" href="https://next-belt.com/privacy-policy" />
 
-  <link rel="stylesheet" href="styles-new.css?v=20260211">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles-new.css?v=20260213">
   <link rel="preconnect" href="https://esm.sh">
 </head>
 <body>
@@ -59,14 +64,14 @@
       <img src="logo.png" alt="NextBelt Logo" />
       <span class="logo-text">NextBelt</span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileMenu()">
       <span id="menu-icon">☰</span>
     </button>
     <nav id="mobile-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li class="nav-dropdown">
-          <a href="#">Solutions</a>
+          <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
           <ul class="dropdown-menu">
             <li><a href="consulting.html">Consulting</a></li>
             <li><a href="platform.html">Platform (SMMS)</a></li>
@@ -316,7 +321,7 @@
   <footer>
     <div class="footer-cta">
       <h4>Built by Maintainers, For Maintainers</h4>
-      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
+      <p>Reliability and maintenance engineers — Fortune 500 alumni with 30+ years on the plant floor. We don’t sell theory; we’ve run the work orders.</p>
     </div>
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
@@ -336,7 +341,7 @@
     import emailjs from 'https://esm.sh/@emailjs/browser';
     window.emailjs = emailjs;
   </script>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260213"></script>
 
   <!-- Tawk.to -->
   <script type="text/javascript">

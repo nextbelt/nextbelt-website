@@ -7,17 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn("EmailJS init skipped:", e);
   }
 
+  // Timestamp page load for the form anti-bot time-trap
+  const pageLoadedAt = Date.now();
+
   // Mobile Menu Toggle Function
   window.toggleMobileMenu = function() {
     const nav = document.getElementById('mobile-nav');
     const menuIcon = document.getElementById('menu-icon');
-    
+    const toggleBtn = document.querySelector('.menu-toggle');
+
     if (nav) {
-      nav.classList.toggle('active');
-      
+      const isOpen = nav.classList.toggle('active');
+
       // Change icon between hamburger and X
       if (menuIcon) {
-        menuIcon.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        menuIcon.textContent = isOpen ? '✕' : '☰';
+      }
+      // Keep the toggle button's ARIA state in sync for screen readers
+      if (toggleBtn) {
+        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       }
     }
   };
@@ -40,19 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (menuIcon) {
           menuIcon.textContent = '☰';
         }
+        const toggleBtn = document.querySelector('.menu-toggle');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
       }
     });
   });
 
-  // Mobile dropdown toggle
+  // Dropdown toggle (all widths). The trigger is href="#", so always
+  // preventDefault to avoid jumping to the top of the page on desktop click.
   const dropdowns = document.querySelectorAll('.nav-dropdown > a');
   dropdowns.forEach(dropdown => {
     dropdown.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        e.stopPropagation();
-        dropdown.parentElement.classList.toggle('open');
-      }
+      e.preventDefault();
+      e.stopPropagation();
+      const opened = dropdown.parentElement.classList.toggle('open');
+      dropdown.setAttribute('aria-expanded', opened ? 'true' : 'false');
     });
   });
 
@@ -66,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         !nav.contains(e.target) && 
         !menuToggle.contains(e.target)) {
       nav.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
       const menuIcon = document.getElementById('menu-icon');
       if (menuIcon) {
         menuIcon.textContent = '☰';
@@ -122,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } catch (e) {
-      console.log('Tawk hiding error:', e);
+      console.debug('Tawk hiding error:', e);
     }
   }
 
@@ -130,19 +141,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const delays = [100, 300, 500, 1000, 1500, 2000, 3000, 5000, 7000];
   delays.forEach(delay => setTimeout(hideTawkBranding, delay));
   
-  // Continuous checking with interval
-  setInterval(hideTawkBranding, 2000);
-  
+  // Continuous checking for a bounded window — the widget loads within a few
+  // seconds, so we stop after 15s to avoid indefinite main-thread/layout work.
+  const tawkInterval = setInterval(hideTawkBranding, 2000);
+  let tawkObserver = null;
+
   // MutationObserver for dynamic changes
   setTimeout(() => {
-    const observer = new MutationObserver(hideTawkBranding);
-    observer.observe(document.body, {
+    tawkObserver = new MutationObserver(hideTawkBranding);
+    tawkObserver.observe(document.body, {
       childList: true,
       subtree: true,
       attributes: true,
       attributeFilter: ['style', 'class']
     });
   }, 500);
+
+  // Tear down the branding-hider once the widget has settled (hidden styles persist).
+  setTimeout(() => {
+    clearInterval(tawkInterval);
+    if (tawkObserver) tawkObserver.disconnect();
+  }, 15000);
 
   const toastEl = document.getElementById('toast');
   function showToast(msg, isError = false) {
@@ -167,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const contactForm =
     document.getElementById('contact-form') ||
+    document.getElementById('demo-form') ||
     document.querySelector('form#contact') ||
     null;
 
@@ -177,11 +197,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (getVal(['hp_site','website','hp','botfield'])) return;
 
+      // Anti-bot time-trap: a human won't submit within 3s of page load
+      if (Date.now() - pageLoadedAt < 3000) return;
+
       const name    = getVal(['name','c_name','contact-name'], '');
       const email   = getVal(['email','c_email','contact-email'], '');
       const subject = getVal(['subject','c_subject','contact-subject'], 'Website Contact');
       const message = getVal(['user_message','message','c_message','contact-message'], '');
       const now     = new Date().toLocaleString();
+
+      if (!name || !email || !message) {
+        showToast("Please add your name, email, and a message.", true);
+        return;
+      }
 
       if (!window.emailjs) {
         showToast("Email service not loaded. Please try again.", true);
@@ -198,13 +226,28 @@ document.addEventListener('DOMContentLoaded', () => {
         reply_to: email
       };
 
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.dataset.label = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+      const restoreBtn = () => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitBtn.dataset.label || 'Send Message';
+        }
+      };
+
       window.emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, params)
         .then(() => {
           try { contactForm.reset(); } catch {}
+          restoreBtn();
           showToast("Thanks! We’ve received your message and emailed a confirmation.");
         })
         .catch((err) => {
           console.error("EmailJS error:", err);
+          restoreBtn();
           showToast("Message sent to NextBelt. If no confirmation arrives, we’ll follow up manually.", true);
         });
     });

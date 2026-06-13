@@ -38,12 +38,17 @@
   <meta property="og:title" content="Conveyor Belt Catalog — NextBelt" />
   <meta property="og:description" content="Browse PVC, PVK, PU conveyor belts, rollers, and accessories. Filter by type, thickness, and color. Request quotes instantly." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://next-belt.com/belt-catalog.html" />
-  <meta property="og:image" content="https://next-belt.com/logo.png" />
+  <meta property="og:url" content="https://next-belt.com/belt-catalog" />
+  <meta property="og:image" content="https://next-belt.com/og-image.png" />
   <meta property="og:site_name" content="NextBelt" />
-  <link rel="canonical" href="https://next-belt.com/belt-catalog.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://next-belt.com/og-image.png" />
+  <link rel="canonical" href="https://next-belt.com/belt-catalog" />
 
-  <link rel="stylesheet" href="styles-new.css?v=20260211">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles-new.css?v=20260213">
   <link rel="preconnect" href="https://esm.sh">
   
   <style>
@@ -100,14 +105,14 @@
       <img src="logo.png" alt="NextBelt Logo" />
       <span class="logo-text">NextBelt</span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileMenu()">
       <span id="menu-icon">☰</span>
     </button>
     <nav id="mobile-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li class="nav-dropdown">
-          <a href="#">Solutions</a>
+          <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
           <ul class="dropdown-menu">
             <li><a href="consulting.html">Consulting</a></li>
             <li><a href="platform.html">Platform (SMMS)</a></li>
@@ -125,15 +130,15 @@
   <main id="main">
   <section class="catalog">
     <div class="container">
-      <h1 class="catalog-title">Belt Catalog</h1>
-      <p class="catalog-subtitle">Choose your belt. Select your specs.</p>
+      <h1 class="catalog-title">Conveyor Belt Catalog</h1>
+      <p class="catalog-subtitle">PVC, PVK, and PU belting matched to your application, duty cycle, and operating temperature. Spec it, quote it, track it.</p>
 
       <!-- SMMS Ready Badge -->
       <div style="background: rgba(13, 79, 79, 0.08); border: 1px solid rgba(13, 79, 79, 0.2); padding: 12px 16px; border-radius: 8px; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
         <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; background: var(--color-primary); color: white; padding: 4px 8px; border-radius: 4px;">SMMS</span>
         <div>
-          <strong style="color: var(--color-primary);">SMMS Ready:</strong> 
-          <span style="color: var(--color-text-secondary); font-size: 14px;">Every belt ordered is automatically added to your Asset Registry for lifecycle tracking.</span>
+          <strong style="color: var(--color-primary);">SMMS-Ready:</strong> 
+          <span style="color: var(--color-text-secondary); font-size: 14px;">Every belt you order drops into your SMMS Asset Registry as a tracked asset, so install dates, splice and wear history, and replacement intervals stay on the record instead of in someone's head.</span>
         </div>
       </div>
 
@@ -175,8 +180,9 @@
       <button class="catalog-scroll-nav left" id="scroll-left" aria-label="Scroll left" type="button">‹</button>
       <button class="catalog-scroll-nav right" id="scroll-right" aria-label="Scroll right" type="button">›</button>
       
-      <div id="catalog-grid" class="catalog-grid" aria-live="polite"></div>
-      <p class="catalog-note">Need a custom size, cleats/sidewalls, guide bars, or roller dimensions? Add details in the notes.</p>
+      <div id="catalog-grid" class="catalog-grid"></div>
+      <p id="catalog-status" class="sr-only" role="status" aria-live="polite"></p>
+      <p class="catalog-note">Running a non-standard width, length, or endless splice? Need cleats, sidewalls, guide bars, or specific roller Ø and face length? Put the specs in the notes and we'll match the build.</p>
     </div>
   </section>
   </main>
@@ -184,7 +190,7 @@
   <footer>
     <div class="footer-cta">
       <h4>Built by Maintainers, For Maintainers</h4>
-      <p>Mechanical Engineers and Fortune 500 Alumni with 30+ years of hands-on experience.</p>
+      <p>Reliability and maintenance engineers — Fortune 500 alumni with 30+ years on the plant floor. We don’t sell theory; we’ve run the work orders.</p>
     </div>
     <div class="footer-bar">
       <span>AZ ROC #359711</span>
@@ -356,7 +362,7 @@
         return `
         <article class="card">
           <div class="card-img">
-            <img src="${img.webp}" alt="${item.type}" onerror="${onErr}">
+            <img src="${img.webp}" alt="${item.type}" loading="lazy" decoding="async" width="300" height="180" onerror="${onErr}">
           </div>
           <div class="card-body">
             <div class="card-title-row">
@@ -377,6 +383,9 @@
       document.querySelectorAll('button[data-quote]').forEach(btn => {
         btn.addEventListener('click', () => openQuote(JSON.parse(btn.dataset.quote)));
       });
+
+      const statusEl = document.getElementById('catalog-status');
+      if (statusEl) statusEl.textContent = `${items.length} belt${items.length === 1 ? '' : 's'} shown`;
     }
 
     function applyFilters() {
@@ -444,9 +453,13 @@
     document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && modal.style.display === 'flex') closeQuote(); });
 
     /* ========= SEND ========= */
+    const catalogLoadedAt = Date.now();
     modalForm.addEventListener('submit', (e) => {
       e.preventDefault();
       if ((document.getElementById('q_hp')||{}).value) { closeQuote(); return; }
+
+      // Anti-bot time-trap: a human won't submit within 3s of page load
+      if (Date.now() - catalogLoadedAt < 3000) { closeQuote(); return; }
 
       const item      = JSON.parse(modalItemJson.value || "{}");
       const name      = document.getElementById('q_name').value;
@@ -482,13 +495,22 @@ Submitted: ${now}`;
       const adminParams = {
         to_email: "info@next-belt.com",
         title: `Quote Request - ${item.type} [${priority}]`,
-        name, time: now, message: summary, email, reply_to: email
+        name, time: now, user_message: summary, email, reply_to: email
       };
+
+      if (!name || !email) {
+        window.showToast && window.showToast("Please add your name and email.", true);
+        return;
+      }
 
       if (!window.emailjs) {
         window.showToast && window.showToast("Email service not loaded. Please try again.", true);
         return;
       }
+
+      const qBtn = modalForm.querySelector('button[type="submit"]');
+      if (qBtn) { qBtn.dataset.label = qBtn.textContent; qBtn.disabled = true; qBtn.textContent = 'Sending…'; }
+      const restoreQBtn = () => { if (qBtn) { qBtn.disabled = false; qBtn.textContent = qBtn.dataset.label || 'Send Request'; } };
 
       emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, adminParams)
         .then(() => {
@@ -496,13 +518,13 @@ Submitted: ${now}`;
             const zendutyParams = {
               to_email: "nextbelt-emergency@next-belt.zendutyalerts.com",
               title: `Emergency RFQ - ${item.type}`,
-              name, time: now, message: summary, email, reply_to: email
+              name, time: now, user_message: summary, email, reply_to: email
             };
             return emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, zendutyParams);
           }
         })
-        .then(() => { closeQuote(); window.showToast && window.showToast("Quote sent! We’ve emailed you a confirmation."); })
-        .catch(err => { console.error("EmailJS error:", err); closeQuote(); window.showToast && window.showToast("Request sent to NextBelt. If the confirmation didn’t arrive, we’ll follow up manually.", true); });
+        .then(() => { restoreQBtn(); closeQuote(); window.showToast && window.showToast("Quote sent! We’ve emailed you a confirmation."); })
+        .catch(err => { console.error("EmailJS error:", err); restoreQBtn(); closeQuote(); window.showToast && window.showToast("Request sent to NextBelt. If the confirmation didn’t arrive, we’ll follow up manually.", true); });
     });
 
     /* ========= INIT ========= */
@@ -563,7 +585,7 @@ Submitted: ${now}`;
     };
   </script>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260213"></script>
 
   <!-- Start of Tawk.to Script -->
   <script type="text/javascript">

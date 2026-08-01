@@ -2896,19 +2896,23 @@ div[style*="bottom"] a[href*="tawk.to"][target="_blank"] {
 /* ============================================
    SCROLL FADE-UP ANIMATION
    ============================================ */
-.fade-up {
+/* Content is VISIBLE BY DEFAULT. The hidden-until-scrolled-into-view state is
+   scoped to html.js, a class set by an inline script in <head>. If JavaScript
+   is blocked, fails, or is disabled, none of these rules apply and the page
+   renders in full — rather than leaving every section at opacity 0 forever. */
+html.js .fade-up {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.fade-up.visible {
+html.js .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.fade-up-stagger > * {
+html.js .fade-up-stagger > * {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),

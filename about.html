@@ -32,11 +32,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
-  <meta name="description" content="NextBelt is an owner-operated conveyor belt service provider with 30+ years of combined experience. Meet the team of mechanical engineers and Fortune 500 alumni transforming industrial maintenance." />
+  <meta name="description" content="NextBelt is an owner-operated conveyor belt service provider with 30+ years of combined experience in industrial maintenance and high-volume logistics facilities." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="About Us — NextBelt" />
-  <meta property="og:description" content="Owner-operated conveyor belt service provider with 30+ years of combined experience. Meet our team of reliability engineers." />
+  <meta property="og:description" content="Owner-operated conveyor belt service provider with 30+ years of combined experience keeping material handling systems moving." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://next-belt.com/about" />
   <meta property="og:image" content="https://next-belt.com/og-image.png" />
@@ -74,12 +74,12 @@
           <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
           <ul class="dropdown-menu">
             <li><a href="consulting.html">Consulting</a></li>
-            <li><a href="platform.html">Platform (SMMS)</a></li>
+            <li><a class="dropdown-child" href="rmi-audit.html">RMI Audit</a></li>
+            <li><a href="https://smmsapp.com" target="_blank" rel="noopener noreferrer">SMMS</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a class="dropdown-child" href="belt-catalog.html">Catalog</a></li>
           </ul>
         </li>
-        <li><a href="belt-catalog.html">Catalog</a></li>
-        <li><a href="rmi-audit.html">RMI Audit</a></li>
         <li><a class="active" href="about.html">About</a></li>
         <li><a href="index.html#contact" class="btn--nav-cta">Contact</a></li>
       </ul>
@@ -95,11 +95,14 @@
     </div>
   </section>
 
-  <!-- Two Column: Team + Story -->
+  <!-- Company Story (team column temporarily hidden) -->
   <section class="offerings-section fade-up">
     <div class="container">
-      <div class="about-grid">
-        <!-- Team Column -->
+      <!-- TEAM TEMPORARILY HIDDEN (photos + names).
+           To restore: drop the inline style on .about-grid below, then remove
+           the "TEAM HIDDEN START" / "TEAM HIDDEN END" comment markers. -->
+      <div class="about-grid" style="grid-template-columns: 1fr;">
+        <!-- TEAM HIDDEN START
         <div class="about-team-col">
           <h2>Meet the Reliability Engineers</h2>
           <p class="about-team-subtitle">Mechanical engineers and Fortune 500 maintenance alumni. 30+ years of combined wrench time, RCAs, and reliability programs run on the plant floor.</p>
@@ -142,6 +145,7 @@
             </div>
           </div>
         </div>
+        TEAM HIDDEN END -->
 
         <!-- Story Column -->
         <div class="about-story-col">
@@ -235,7 +239,7 @@
       s1.async=true;
       s1.src='https://embed.tawk.to/68b4a12e0e49f131d3b4b3fa/1j40pb80g';
       s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
+      s1.setAttribute('crossorigin','anonymous');
       s0.parentNode.insertBefore(s1,s0);
     })();
   </script>

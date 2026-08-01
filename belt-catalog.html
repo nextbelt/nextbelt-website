@@ -115,12 +115,12 @@
           <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
           <ul class="dropdown-menu">
             <li><a href="consulting.html">Consulting</a></li>
-            <li><a href="platform.html">Platform (SMMS)</a></li>
+            <li><a class="dropdown-child" href="rmi-audit.html">RMI Audit</a></li>
+            <li><a href="https://smmsapp.com" target="_blank" rel="noopener noreferrer">SMMS</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a class="dropdown-child active" href="belt-catalog.html">Catalog</a></li>
           </ul>
         </li>
-        <li><a class="active" href="belt-catalog.html">Catalog</a></li>
-        <li><a href="rmi-audit.html">RMI Audit</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="index.html#contact" class="btn--nav-cta">Contact</a></li>
       </ul>
@@ -598,7 +598,7 @@ Submitted: ${now}`;
       s1.async=true;
       s1.src='https://embed.tawk.to/68b4a12e0e49f131d3b4b3fa/1j40pb80g';
       s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
+      s1.setAttribute('crossorigin','anonymous');
       s0.parentNode.insertBefore(s1,s0);
     })();
   </script>

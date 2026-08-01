@@ -267,6 +267,24 @@ header nav ul li a:hover {
   background: rgba(13, 79, 79, 0.05) !important;
 }
 
+/* Nested dropdown entries — Catalog sits under Services, RMI Audit under Consulting.
+   Indent plus a short tick mark so the parent/child relationship reads visually. */
+.dropdown-menu li a.dropdown-child {
+  position: relative;
+  padding-left: calc(var(--space-lg) + var(--space-md)) !important;
+  font-size: var(--text-xs);
+}
+
+.dropdown-menu li a.dropdown-child::before {
+  content: "";
+  position: absolute;
+  left: var(--space-lg);
+  top: 50%;
+  width: 9px;
+  height: 1px;
+  background: var(--color-border);
+}
+
 /* Mobile menu */
 .menu-toggle {
   display: none;
